@@ -1,0 +1,8 @@
+# Ignore downloaded chef cookbooks
+chef/cookbooks
+# Ingore librarian-chef tmp files
+chef/tmp
+# Ingore .vagrant dir
+.vagrant
+#Ignore file endig with ~
+*~

@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+site 'http://community.opscode.com/api/v1'
+
+cookbook 'git'
+cookbook 'erlang'
+cookbook 'riak_core_tutorial', :path => 'site-cookbooks/riak_core_tutorial'
