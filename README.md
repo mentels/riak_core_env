@@ -33,8 +33,10 @@ vagrant up
 
 Then ssh into the virtual machine: `vagrant ssh`.
 
-You can edit the tutorial's code from your machine as it's shared with
-the VM via `synced/` directory.
+The code required for the tutorial sits in
+`/home/vagrant/synced/riak_core_tutorial`. It can be edited from your
+machine as the local `./synced` directory is synchronized with
+`/home/vagrant/synced` in the VM.
 
 When you finish you can stop the VM by running `vagrant halt` or event
 destroy it with `vagrant destroy`. 
