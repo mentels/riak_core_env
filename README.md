@@ -15,18 +15,27 @@ The environment requires [VirtualBox](https://www.virtualbox.org/)
   that install Chef cookbooks using Librarian-Chef (tested with version
   0.2.1).
 
-To install the dependencies follow the instructions from their websites.
+To install the plugins follow the instructions in the next chapter.
 
 ### Running ###
 
-To run the environment for the riak_core_tutorial just run `vagrant up`
-and ssh into the virtual machine `vagrant ssh`.
+To run the environment for the riak_core_tutorial just run:
 
-> NOTE: Running `vagrant up` for the first time can take few minutes.
+```bash
+vagrant plugin install vagrant-omnibus
+vagrant plugin install vagrant-librarian-chef
+vagrant up
+```
+
+> NOTE:
+> * installing the plugins is required only once;
+> * running `vagrant up` for the first time can take few minutes.
+
+Then ssh into the virtual machine: `vagrant ssh`.
 
 You can edit the tutorial's code from your machine as it's shared with
 the VM via `synced/` directory.
 
 When you finish you can stop the VM by running `vagrant halt` or event
-destroy it with `vagrant destroy`.
+destroy it with `vagrant destroy`. 
 
