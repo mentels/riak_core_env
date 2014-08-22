@@ -12,3 +12,24 @@ git "/home/vagrant/synced/riak_core_tutorial" do
   reference "master"
   action :sync
 end
+
+directory dir = "/home/vagrant/synced/riak_core_tutorial/hello_multinode" do
+  owner "vagrant"
+  group "vagrant"
+  mode 00755
+  action :create
+  not_if {
+    File.exist?(dir)
+  }
+end
+
+remote_file "/home/vagrant/synced/riak_core_tutorial/hello_multinode/rebar" do
+  source "http://cloud.github.com/downloads/basho/rebar/rebar"
+  owner "vagrant"
+  group "vagrant"
+  mode 00555
+end
+
+
+
+
