@@ -1,4 +1,4 @@
-riak_core_env
+riak_core_tutorial_env
 =============
 
 Environment for [riak_core_tutorial](https://github.com/mentels/riak_core_tutorial).
