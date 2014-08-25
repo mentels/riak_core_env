@@ -7,13 +7,13 @@
 # All rights reserved - Do Not Redistribute
 #
 
-git "/home/vagrant/synced/riak_core_tutorial" do
+git "/home/vagrant/synced/crawler" do
   repository "https://github.com/mentels/riak_core_tutorial"
   reference "master"
   action :sync
 end
 
-directory dir = "/home/vagrant/synced/riak_core_tutorial/hello_multinode" do
+directory dir = "/home/vagrant/synced/multinode" do
   owner "vagrant"
   group "vagrant"
   mode 00755
@@ -23,7 +23,7 @@ directory dir = "/home/vagrant/synced/riak_core_tutorial/hello_multinode" do
   }
 end
 
-remote_file "/home/vagrant/synced/riak_core_tutorial/hello_multinode/rebar" do
+remote_file "/home/vagrant/synced/multinode/rebar" do
   source "http://cloud.github.com/downloads/basho/rebar/rebar"
   owner "vagrant"
   group "vagrant"
