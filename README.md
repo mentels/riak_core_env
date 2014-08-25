@@ -19,9 +19,11 @@ To install the plugins follow the instructions below.
 
 ### Running ###
 
-To install the environment for the riak_core_tutorial run:
+To install the environment run:
 
 ```bash
+git clone https://github.com/mentels/riak_core_tutorial_env rct_env
+cd rct_env
 vagrant plugin install vagrant-omnibus
 vagrant plugin install vagrant-librarian-chef
 vagrant up
