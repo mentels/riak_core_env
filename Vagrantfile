@@ -4,6 +4,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu/precise64"
   config.vm.hostname = "rct"
   config.vm.synced_folder "synced", "/home/vagrant/synced"
+
+  config.vm.provider "virtualbox" do |vm|
+    vm.customize ["modifyvm", :id, "--memory", "1024", "--cpus", "2"]
+  end
+
   config.vm.provision "chef_solo" do |chef|
     chef.cookbooks_path = "chef/cookbooks"
     chef.custom_config_path = "Vagrantfile.chef"
@@ -16,6 +21,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         :esl => {:version => '1:15.b.3-2~ubuntu~precise'}
       }}
   end
+
   config.omnibus.chef_version = :latest
   config.librarian_chef.cheffile_dir = "chef"
   config.ssh.insert_key = true
